@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="將冠宇資訊的電器行軟體，欲盤點的現有庫存轉成 Excel 檔 ，並上傳至雲端盤點系統，再利用手機搭配藍芽掃描器做盤點，將盤點資料存至雲端，然後產生盤盈(虧)資料，並可下載成Excel檔格式">
+    <meta name="keywords" content="電器行,電氣行,冷氣行,冷凍空調">
+    <title>冠宇資訊--雲端盤點系統</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row d-flex d-md-block flex-nowrap wrapper">
+            <div class="col-md-2 float-left col-1 pl-0 pr-0 collapse width show" id="sidebar">
+                <div class="list-group border-0 card text-center text-md-left">
+                    <a href="#page-header" class="list-group-item list-group-item-alt d-inline-block collapsed" data-parent="#sidebar">
+                        <!-- <i class="fas fa-tv"></i> -->
+                        <i class="fas fa-calculator"></i>
+                        <span class="d-none d-md-inline">雲端盤點</span>
+                    </a>
+
+                    <a href="#" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
+                        <i class="fas fa-home"></i>
+                        <span class="d-none d-md-inline">系統介紹</span>
+                    </a>
+
+                    <a href="#function" class="list-group-item d-inline-block collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false">
+                        <i class="fas fa-hammer"></i>
+                        <span class="d-none d-md-inline">操作說明</span>
+                    </a>
+
+                    <div class="collapse" id="function" data-parent="#sidebar">
+                        <a href="page/fun1.html" class="list-group-item" data-parent="#menu1">系統架構</a>
+                        <a href="page/fun2.html" class="list-group-item" data-parent="#menu1">庫存轉檔</a>
+                        <a href="page/fun3.html" class="list-group-item" data-parent="#menu1">庫存上傳</a>
+                        <a href="page/fun4.html" class="list-group-item" data-parent="#menu1">手機盤點</a>
+                        <a href="page/fun5.html" class="list-group-item" data-parent="#menu1">盤點計算</a>
+                    </div>
+
+                    <a href="page/question.html" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
+                        <i class="fas fa-question-circle"></i>
+                        <span class="d-none d-md-inline">常見問題</span>
+                    </a>
+
+
+                    <a href="page/contact.html" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
+                        <i class="fas fa-phone"></i>
+                        <span class="d-none d-md-inline">冠宇資訊</span>
+                    </a>
+                </div>
+            </div>
+            <main class="col-md-10 float-left col px-5 pl-md-4 py-4 main">
+                <div id="page-header" class="page-header">
+                    <h1>雲端盤點系統 <i class="fas fa-mobile-alt" style="font-size:48px" ></i> </h1>
+                </div>
+
+                <hr>
+                <div class="back-top-top"><a href="http://www.kyc168.com.tw" target="_blank">
+                    <button type="button" class="btn btn-primary">
+                        回到冠宇資訊
+                    </button></a>
+                </div>
+        
+                <div class="row">
+                    <div id="fun1" class="col-12 pb-5">
+                        <div class="list-group" style = "margin-top: 0px;margin-bottom: 30px">
+                            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start  active">
+                                <div class="d-flex w-100 justify-content-between">
+                                        <h3 class="mb-1">系統 開發理念</h3>
+                                </div>
+                                <p class="mb-1">改善客戶庫存管理的問題</p>
+                                <p class="mb-1">因為很多因素，造成現場庫存和電腦帳不符</p>
+                                <p class="mb-1">所以須常常盤點庫存</p>
+                                <p class="mb-1">一般傳統盤點機價格較高，而且局限於盤點機螢幕較小，盤點時可顯示的產品資訊會較少</p>
+                                <p class="mb-1">所以我們思考用手機加上可攜帶式藍芽條碼掃描器，來取代傳統盤點機的可行性</p>
+                                <p class="mb-1">目前僅支援 Android 手機 4.0 以上版本</p>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div id="fun1" class="col-12 pb-5" >
+                        <div class="list-group  alert alert-success" style = "margin-top: 0px;margin-bottom: 30px">
+                            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-between">
+                                        <h3 class="mb-1">系統介紹</h3>
+                                </div>
+
+                                <p class="mb-1">01:將冠宇資訊的電器行軟體，欲盤點的現有庫存轉成 Excel 檔 ，並上傳至雲端盤點系統</p>
+                                <p class="mb-1">02:利用手機搭配藍芽掃描器做盤點，將盤點資料存至雲端</p>
+                                <p class="mb-1">03:將盤點資料和現有庫存檔計算，產生盤盈(虧)資料，並可下載成Excel檔格式</p>
+                                <p class="mb-1">04:使用者根據下載下來的Excel檔之盤盈(虧)資料,來調整冠宇資訊的電器行軟體的庫存</p>
+                            </a>
+                        </div>   
+        
+                    </div>
+                </div>                                
+               
+            </main>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

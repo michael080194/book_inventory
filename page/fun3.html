@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="將冠宇資訊的電器行軟體，欲盤點的現有庫存轉成 Excel 檔 ，並上傳至雲端盤點系統，再利用手機搭配藍芽掃描器做盤點，將盤點資料存至雲端，然後產生盤盈(虧)資料，並可下載成Excel檔格式">
+    <title>冠宇資訊--雲端盤點系統</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row d-flex d-md-block flex-nowrap wrapper">
+            <div class="col-md-2 float-left col-1 pl-0 pr-0 collapse width show" id="sidebar">
+                <div class="list-group border-0 card text-center text-md-left">
+                    <a href="..\index.html" class="list-group-item list-group-item-alt d-inline-block collapsed" data-parent="#sidebar">
+                        <!-- <i class="fas fa-tv"></i> -->
+                        <i class="fas fa-calculator"></i>
+                        <span class="d-none d-md-inline">雲端盤點</span>
+                    </a>
+
+                    <a href="..\index.html" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
+                        <i class="fas fa-home"></i>
+                        <span class="d-none d-md-inline">系統介紹</span>
+                    </a>
+
+                    <a href="#function" class="list-group-item d-inline-block collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false">
+                        <i class="fas fa-hammer"></i>
+                        <span class="d-none d-md-inline">操作說明</span>
+                    </a>
+
+                    <div id="function" data-parent="#sidebar">
+                        <a href="fun1.html" class="list-group-item" data-parent="#menu1">系統架構</a>
+                        <a href="fun2.html" class="list-group-item" data-parent="#menu1">庫存轉檔</a>
+                        <a href="fun3.html" class="list-group-item" data-parent="#menu1">庫存上傳</a>
+                        <a href="fun4.html" class="list-group-item" data-parent="#menu1">手機盤點</a>
+                        <a href="fun5.html" class="list-group-item" data-parent="#menu1">盤點計算</a>
+                    </div>
+
+                    <a href="question.html" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
+                        <i class="fas fa-question-circle"></i>
+                        <span class="d-none d-md-inline">常見問題</span>
+                    </a>
+
+
+                    <a href="contact.html" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
+                        <i class="fas fa-phone"></i>
+                        <span class="d-none d-md-inline">冠宇資訊</span>
+                    </a>
+                </div>
+            </div>
+            <main class="col-md-10 float-left col px-5 pl-md-4 py-4 main">
+                <div id="page-header" class="page-header">
+                    <h1>雲端盤點系統 <i class="fas fa-mobile-alt" style="font-size:48px" ></i> </h1>
+                </div>
+
+                <hr>
+                <div class="back-top-top"><a href="http://www.kyc168.com.tw" target="_blank">
+                    <button type="button" class="btn btn-primary">
+                        回到冠宇資訊
+                    </button></a>
+                </div>
+
+                <div class="row">
+                    <div id="fun1" class="col-12 pb-5">
+                        <div class="list-group" style = "margin-top: 0px;margin-bottom: 30px">
+                            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start  active">
+                                <div class="d-flex w-100 justify-content-between">
+                                        <h3 class="mb-1">庫存上傳</h3>
+                                </div>
+                                <p class="mb-1">將 冠宇資訊 財運亨通 電器行軟體轉出之Excel，匯入雲端盤點系統；到時使用者再依此庫存檔來盤點；並計算盤盈虧</p>
+                            </a>
+                        </div>
+
+                        <div class="list-group" style = "margin-top: 30px;margin-bottom: 15px">
+                            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">登入雲端管理系統</h5>
+                                </div>
+                                <p class="mb-1">(a)每個客戶使用本雲端系統，冠宇資訊都會賦予一組代號；若一公司有多個分店，我們只會一個公司代碼，到時請由使用者自行區分</p>
+                                <p class="mb-1">(b)進入雲端系統可自行新增、修改、刪除使用者代號</p>
+                                <p class="mb-1">(c)登入畫面帳密是和手機APP使用相同資料</p>
+                            </a>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <img src="../image/fun3_cloud_login.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+
+                        <div class="list-group" style = "margin-top: 30px;margin-bottom: 15px">
+                                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">庫存上傳</h5>
+                                    </div>
+                                    <p class="mb-1">(a)倉庫別若為01；也可輸入01-DYSON;也可輸入01-除濕機-14:50(代表14:50上傳的；因為同一天可能多人或多種機種類別在做盤點)</p>
+                                    <p class="mb-1">(b)庫存上傳日期：通常是指財運亨通庫存轉出時，當下的日期</p>
+                                    <p class="mb-1">(c)選擇檔案：此欄位指的是財運亨通庫存轉出時的 excel檔名稱(現有庫存表.xls)</p>
+                                </a>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <img src="../image/fun3_cloud_stock_upload.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

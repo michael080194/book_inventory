@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="將冠宇資訊的電器行軟體，欲盤點的現有庫存轉成 Excel 檔 ，並上傳至雲端盤點系統，再利用手機搭配藍芽掃描器做盤點，將盤點資料存至雲端，然後產生盤盈(虧)資料，並可下載成Excel檔格式">
+    <title>冠宇資訊--雲端盤點系統</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row d-flex d-md-block flex-nowrap wrapper">
+            <div class="col-md-2 float-left col-1 pl-0 pr-0 collapse width show" id="sidebar">
+                <div class="list-group border-0 card text-center text-md-left">
+                    <a href="..\index.html" class="list-group-item list-group-item-alt d-inline-block collapsed" data-parent="#sidebar">
+                        <!-- <i class="fas fa-tv"></i> -->
+                        <i class="fas fa-calculator"></i>
+                        <span class="d-none d-md-inline">雲端盤點</span>
+                    </a>
+
+                    <a href="..\index.html" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
+                        <i class="fas fa-home"></i>
+                        <span class="d-none d-md-inline">系統介紹</span>
+                    </a>
+
+                    <a href="#function" class="list-group-item d-inline-block collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false">
+                        <i class="fas fa-hammer"></i>
+                        <span class="d-none d-md-inline">操作說明</span>
+                    </a>
+
+                    <div id="function" data-parent="#sidebar">
+                        <a href="fun1.html" class="list-group-item" data-parent="#menu1">系統架構</a>
+                        <a href="fun2.html" class="list-group-item" data-parent="#menu1">庫存轉檔</a>
+                        <a href="fun3.html" class="list-group-item" data-parent="#menu1">庫存上傳</a>
+                        <a href="fun4.html" class="list-group-item" data-parent="#menu1">手機盤點</a>
+                        <a href="fun5.html" class="list-group-item" data-parent="#menu1">盤點計算</a>
+                    </div>
+
+                    <a href="question.html" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
+                        <i class="fas fa-question-circle"></i>
+                        <span class="d-none d-md-inline">常見問題</span>
+                    </a>
+
+
+                    <a href="contact.html" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
+                        <i class="fas fa-phone"></i>
+                        <span class="d-none d-md-inline">冠宇資訊</span>
+                    </a>
+                </div>
+            </div>
+            <main class="col-md-10 float-left col px-5 pl-md-4 py-4 main">
+                <div id="page-header" class="page-header">
+                    <h1>雲端盤點系統 <i class="fas fa-mobile-alt" style="font-size:48px" ></i> </h1>
+                </div>
+
+                <hr>
+                <div class="back-top-top"><a href="http://www.kyc168.com.tw" target="_blank">
+                    <button type="button" class="btn btn-primary">
+                        回到冠宇資訊
+                    </button></a>
+                </div>
+
+                <div class="row">
+                    <div id="fun1" class="col-12 pb-5">
+                        <div class="list-group" style = "margin-top: 0px;margin-bottom: 30px">
+                            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start  active">
+                                <div class="d-flex w-100 justify-content-between">
+                                        <h3 class="mb-1">手機盤點</h3>
+                                </div>
+                                <p class="mb-1">將 冠宇資訊 財運亨通 電器行軟體轉出之Excel，匯入雲端盤點系統；到時使用者再依此庫存檔來盤點；並計算盤盈虧</p>
+                            </a>
+                        </div>
+
+                        <div class="list-group" style = "margin-top: 30px;margin-bottom: 15px">
+                                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">手機登入</h5>
+                                    </div>
+                                    <p class="mb-1">(a)登入：帳密和雲端盤點系統一樣；若不想每次輸入，可在設定頁面先記錄起來</p>
+                                    <p class="mb-1">(b)設定：可將帳密先儲存起來；登入時不用每次都再輸入</p>
+                                    <p class="mb-1">(c)關於：可查詢APP版本</p>
+                                </a>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <img src="../image/fun4_01_login.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-3">
+                                <img src="../image/fun4_01_setup.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-3">
+                                <img src="../image/fun4_01_about.jpg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+
+                        <div class="list-group" style = "margin-top: 30px;margin-bottom: 15px">
+                                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">選擇盤點對象</h5>
+                                    </div>
+                                    <p class="mb-1">(a)登入系統，會讓你選擇欲盤點的倉別及庫存上傳日期</p>
+                                    <p class="mb-1">(b)請慎選盤點資料，否則會造成盤點計算錯誤</p>
+                                </a>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <img src="../image/fun4_02_start_menu.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-3">
+                                <img src="../image/fun4_02_start_select_data.jpg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+
+                        <div class="list-group" style = "margin-top: 30px;margin-bottom: 15px">
+                                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">顯示盤點</h5>
+                                    </div>
+                                    <p class="mb-1">(a)可顯示這個使用者，目前這個倉別、庫存上傳日期的盤點資料，並可修改或刪除</p>
+                                    <p class="mb-1">(b)在欲修改的資料，右滑會出現修改及刪除的圖示</p>
+                                </a>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <img src="../image/fun4_02_inventory_list.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-3">
+                                <img src="../image/fun4_02_inventory_list_next.jpg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+
+                        <div class="list-group" style = "margin-top: 30px;margin-bottom: 15px">
+                                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">開始盤點</h5>
+                                    </div>
+                                    <p class="mb-1">(a)可在條碼欄位，直接用藍芽掃描器做盤點;或按［掃條碼]按鈕，使用手機來掃條碼</p>
+                                    <p class="mb-1">(b)在欲修改的資料，右滑會出現修改及刪除的圖示</p>
+                                </a>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <img src="../image/fun4_03_start_inventory.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-3">
+                                <img src="../image/fun4_03_start_inventory_edit.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-3">
+                                <img src="../image/fun4_03_start_inventory_edit_next.jpg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+
+                        <div class="list-group" style = "margin-top: 30px;margin-bottom: 15px">
+                                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">從現有庫存檔產生盤點資料</h5>
+                                    </div>
+                                    <p class="mb-1">(a)在開始盤點的頁面右上角，按放大鏡，可讓使用者查詢現有庫存資料，來輸入盤點資料</p>
+                                    <p class="mb-1">(b)在搜尋頁，輸入產品編號(機種編號)或產品名稱關鍵字，然後按［搜尋產品資料］按鈕，就可搜尋現有庫存資料</p>
+                                    <p class="mb-1">(c)搜尋資料完畢後，在顯示列表中，在欲新增的那筆資料，右滑會出現圖示，就可新增盤點資料</p>
+                                </a>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <img src="../image/fun4_04_search_buttom.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-3">
+                                <img src="../image/fun4_04_search.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-3">
+                                <img src="../image/fun4_04_search_add.jpg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+
+                        <div class="list-group" style = "margin-top: 30px;margin-bottom: 15px">
+                                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">手動輸入盤點資料</h5>
+                                    </div>
+                                    <p class="mb-1">(a)在開始盤點的頁面右上角，按放大鏡，可讓使用者來輸入盤點資料</p>
+                                    <p class="mb-1">(b)輸入產品編號(機種編號)及產品名稱，然後按［直接新增盤點］按鈕，就可手動輸入盤點資料</p>
+                                    <p class="mb-1">(c)搜尋資料完畢後，在顯示列表中，在欲新增的那筆資料，右滑會出現圖示，就可新增盤點資料</p>
+                                </a>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <img src="../image/fun4_04_search_buttom.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-3">
+                                <img src="../image/fun4_04_search.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-3">
+                                <img src="../image/fun4_04_search_hand_add.jpg" alt="" class="img-fluid">
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="將冠宇資訊的電器行軟體，欲盤點的現有庫存轉成 Excel 檔 ，並上傳至雲端盤點系統，再利用手機搭配藍芽掃描器做盤點，將盤點資料存至雲端，然後產生盤盈(虧)資料，並可下載成Excel檔格式">
+    <title>冠宇資訊--雲端盤點系統</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row d-flex d-md-block flex-nowrap wrapper">
+            <div class="col-md-2 float-left col-1 pl-0 pr-0 collapse width show" id="sidebar">
+                <div class="list-group border-0 card text-center text-md-left">
+                    <a href="..\index.html" class="list-group-item list-group-item-alt d-inline-block collapsed" data-parent="#sidebar">
+                        <!-- <i class="fas fa-tv"></i> -->
+                        <i class="fas fa-calculator"></i>
+                        <span class="d-none d-md-inline">雲端盤點</span>
+                    </a>
+
+                    <a href="..\index.html" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
+                        <i class="fas fa-home"></i>
+                        <span class="d-none d-md-inline">系統介紹</span>
+                    </a>
+
+                    <a href="#function" class="list-group-item d-inline-block collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false">
+                        <i class="fas fa-hammer"></i>
+                        <span class="d-none d-md-inline">操作說明</span>
+                    </a>
+
+                    <div id="function" data-parent="#sidebar">
+                        <a href="fun1.html" class="list-group-item" data-parent="#menu1">系統架構</a>
+                        <a href="fun2.html" class="list-group-item" data-parent="#menu1">庫存轉檔</a>
+                        <a href="fun3.html" class="list-group-item" data-parent="#menu1">庫存上傳</a>
+                        <a href="fun4.html" class="list-group-item" data-parent="#menu1">手機盤點</a>
+                        <a href="fun5.html" class="list-group-item" data-parent="#menu1">盤點計算</a>
+                    </div>
+
+                    <a href="question.html" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
+                        <i class="fas fa-question-circle"></i>
+                        <span class="d-none d-md-inline">常見問題</span>
+                    </a>
+
+
+                    <a href="contact.html" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
+                        <i class="fas fa-phone"></i>
+                        <span class="d-none d-md-inline">冠宇資訊</span>
+                    </a>
+                </div>
+            </div>
+            <main class="col-md-10 float-left col px-5 pl-md-4 py-4 main">
+                <div id="page-header" class="page-header">
+                    <h1>雲端盤點系統 <i class="fas fa-mobile-alt" style="font-size:48px" ></i> </h1>
+                </div>
+                <hr>
+                <div class="back-top-top"><a href="http://www.kyc168.com.tw" target="_blank">
+                    <button type="button" class="btn btn-primary">
+                        回到冠宇資訊
+                    </button></a>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h2>常見問題</h2>
+                    </div>
+
+
+                    <div class="col-12 col-lg-9">
+                       <div class="card border-success">
+                            <div class="card-header" id="q2">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link font-weight-bold" data-toggle="collapse" data-target="#a2" aria-expanded="true" aria-controls="a2">
+                                        #01 我不是使用,冠宇資訊的財運享通的電器行軟體,可否使用雲端盤點系統？
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="a2" class="collapse show" aria-labelledby="q2">
+                                <div class="card-body">
+                                    只要能提供上傳的Excel檔格式相符，就沒問題
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding-bottom: 20px"></div>
+                        <div class="card  border-success">
+                            <div class="card-header" id="q1">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link font-weight-bold" data-toggle="collapse" data-target="#a1" aria-expanded="true" aria-controls="a1">
+                                        #02 我如何下載 雲端盤點管理APP？
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="a1" class="collapse show" aria-labelledby="q1">
+                                <div class="card-body">
+                                    進入雲端管理系統，然後就可下載(可用 LINE --> 主頁 --> 加入好友 --> 行動條碼 掃描 Qrcode)。
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <img src="../image/question_app_download.png" alt="" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="padding-bottom: 20px"></div>
+                        <div class="card  border-success">
+                            <div class="card-header" id="q1">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link font-weight-bold" data-toggle="collapse" data-target="#a1" aria-expanded="true" aria-controls="a1">
+                                        #03 我如何移除 雲端盤點管理APP(或中止執行)？
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="a1" class="collapse show" aria-labelledby="q1">
+                                <div class="card-body">
+                                     在手機 雲端盤點 圖示 長按 3 秒，然後出現 應用程式資訊，此時就可移除 APP(或中止執行)。
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img src="../image/question_app_remove1.jpg" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="col-3">
+                                            <img src="../image/question_app_remove2.jpg" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="col-3">
+                                            <img src="../image/question_app_remove3.jpg" alt="" class="img-fluid">
+                                        <div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
